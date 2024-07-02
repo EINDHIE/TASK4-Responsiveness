@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  background-color: white;
+  padding: 12.5px 40px;
+  max-height: 85px;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      height: 100%;
+
+      img {
+        width: 130px;
+        height: auto;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      li {
+        a {
+          color: #181a18;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+section.hero {
+  background-image: url("/images/hero-img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  height: 100dvh;
+  position: relative;
+
+  .hero-content {
+    padding: 60px 80px;
+    background-color: white;
+    max-width: 493px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    top: 140px;
+    position: absolute;
+
+    h1 {
+      font-size: clamp(2.5rem, 2.4004rem + 0.531vw, 3.25rem);
+      line-height: 60px;
+    }
+
+    p {
+      font-size: clamp(1rem, 0.9834rem + 0.0885vw, 1.125rem);
+      line-height: 24px;
+    }
+  }
+}
+
+section.future-section {
+  padding: 160px 80px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    /* gap: 32px; */
+    background-color: #f2f0f2;
+    border-radius: 60px;
+    padding: 0 16px;
+
+    /* border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px; */
+  }
+
+  .future-img-wrapper {
+    /* width: 50%; */
+    /* display: flex; */
+    /* height: 100%; */
+
+    img {
+      max-width: 100%;
+      /* height: auto; */
+    }
+  }
+
+  .future-contents {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 120px 80px;
+
+    h4 {
+      font-size: 48px;
+      line-height: 54px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+
+section.features-section {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 0 16px;
+
+    .heading-and-subheading {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+      max-width: 70%;
+      margin: 0 auto;
+      .heading {
+        font-size: 48px;
+        line-height: 54px;
+        font-weight: 700;
+      }
+
+      .subheading {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    .features {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      /* align-items: center;
+      flex-wrap: wrap; */
+
+      .feature-card {
+        padding: 32px 40px;
+        background-color: #e2f1e8;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        /* max-width: 300px; */
+
+        img {
+          align-self: flex-start;
+        }
+
+        h6 {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+/* Between tablets and small desktop */
+@media (min-width: 768.98px) and (max-width: 1024px) {
+  section.hero {
+  }
+  .hero-content {
+    top: 60px;
+    padding: 48px;
+  }
+}
+
+@media (min-width: 640px) {
+
+  header{
+    nav{
+      .nav-menu-hamburger{
+        display: none;
+      }
+    }
+  }
+
+  section.hero {
+    .hero-content {
+      top: 40px;
+    }
+  }
+}
+
+@media (max-width: 639.98px) {
+
+  header{
+    padding: 16px;
+    nav{
+
+      .logo {
+        height: 100%;
+  
+        img {
+          width: 67px;
+          height: auto;
+        }
+      }
+
+      ul{
+        display: none;
+      }
+    }
+  }
+
+
+  section.hero {
+
+    .hero-content {
+      padding: 32px;
+      top: 20px;
+      gap: 16px;
+
+    h1{
+      line-height: 42px;
+    }
+    }
+  }
+
+  secttion.features-section {
+    .container {
+      gap: 40px;
+    }
+  }
+}
